@@ -31,7 +31,7 @@ use std::error::Error;
 
 // common
 #[cfg(any(unix, windows))]
-extern crate dirs;
+//extern crate dirs;
 #[cfg(any(unix, windows))]
 extern crate reqwest;
 #[cfg(any(unix, windows))]
