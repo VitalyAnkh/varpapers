@@ -1,0 +1,8 @@
+[package]
+name = "varpapers"
+description = "a tool to change your computers' wallpapers automatically, runs on multiple platforms"
+version = "0.1.0"
+authors = ["VitalyR <vitalyankh@gmail.com>"]
+edition = "2018"
+
+[dependencies]
