@@ -2,7 +2,22 @@
 name = "varpapers"
 description = "a tool to change your computers' wallpapers automatically, runs on multiple platforms"
 version = "0.1.0"
+repository = "https://github.com/VitalyAnkh/wallpaper.rs"
 authors = ["VitalyR <vitalyankh@gmail.com>"]
 edition = "2018"
+keywords = ["desktop", "wallpaper", "background"]
 
 [dependencies]
+[target.'cfg(any(unix, windows))'.dependencies]
+dirs = "1.0"
+reqwest = "0.8"
+url = "1.7"
+
+[target.'cfg(unix)'.dependencies]
+enquote = "1"
+
+[target.'cfg(all(unix, not(target_os = "macos")))'.dependencies]
+rust-ini = "0.12"
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["winuser"] }
